@@ -50,18 +50,7 @@ public class ArrowMovement : MonoBehaviour
         GetMousePos();
         GetDifference();
     }
-    public void StraightMovement()
-    {
-        newZ = transform.position.z + speedZ * Time.deltaTime;
-        transform.position = new Vector3(transform.position.x, transform.position.y, newZ);
-    }
-    private void GetMousePos()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            firstPos = mainCamera.WorldToViewportPoint(Input.mousePosition);
-        }
-    }
+    //not for movement
     private void GetDifference()
     {
         if (Input.GetMouseButton(0))
@@ -74,6 +63,19 @@ public class ArrowMovement : MonoBehaviour
             arrowSpawner.ExpandBetweenArrows(difference.x *2);
         }
     }
+    public void StraightMovement()
+    {
+        newZ = transform.position.z + speedZ * Time.deltaTime;
+        transform.position = new Vector3(transform.position.x, transform.position.y, newZ);
+    }
+    private void GetMousePos()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            firstPos = mainCamera.WorldToViewportPoint(Input.mousePosition);
+        }
+    }
+    
     private void SwerweMovement()
     {
         if (Input.GetMouseButton(0))
