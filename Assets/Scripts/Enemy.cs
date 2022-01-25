@@ -21,7 +21,6 @@ public class Enemy : MonoBehaviour
         if(other.tag == "EnemyDestroy")
         {
             arrowDestroyer.ArrowPlusDestroy(1);
-            Debug.Log("sa");
         }
        
     }
