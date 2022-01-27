@@ -19,7 +19,6 @@ public class ArrowSpawner : MonoBehaviour
     public float radiusIncreaseX = 0.15f;
     public float radiusIncrease = 0.15f;
     public float lastRadius = 0.2f;
-    public float lastRadius2 = 0.2f;
 
     private void Start()
     {
